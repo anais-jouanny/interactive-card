@@ -13,38 +13,44 @@
 
     </head>
     <body>
+      <div class="app">
 
-      0000 0000 0000 0000
-      Jane Appleseed
-      00/00
+        <div class="banner"></div>
+  
+        <div class="card card-front"></div>
+  
+        <div class="card card-back"></div>
+  
+        <form action="">
+          <label>cardholder name
+            <input type="text" name="name" placeholder="Jane Appleseed" required>
+          </label>
 
-      000
+          <label>card number
+            <input type="text" name="number" minlength="19" maxlength="19" placeholder="1234 5678 9123 0000" required>
+          </label>  
 
-      Cardholder Name
-      e.g. Jane Appleseed
+          <div class="date">
+              <label>exp.date (mm/yy)
+                <input type="text" name="month" minlength="2" maxlength="2" placeholder="MM" required>
+                <input type="text" name="year" minlength="2" maxlength="2" placeholder="YY" required>
+              </label>
+            
+              <label>cvc
+                <input type="number" name="cvc" minlength="3" maxlength="3" placeholder="123" required>
+              </label>
+          </div>
 
-      Card Number
-      e.g. 1234 5678 9123 0000
+          <button>Confirm</button>
+        </form>
 
-      Exp. Date (MM/YY)
-      MM
-      YY
+        <div class="success hidden">
+          <div class="check">✔️</div>
+          <h1>thank you!</h1>
+          <p>We've added your card details</p>
+          <button>Continue</button>
+        </div>
 
-      CVC
-      e.g. 123
-
-      Confirm
-
-      <!-- Completed state start -->
-
-      Thank you!
-      We've added your card details
-      Continue
-      
-      <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-        Coded by <a href="#">Anaïs</a>.
       </div>
-
     </body>
   </html>

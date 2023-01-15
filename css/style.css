@@ -1,0 +1,89 @@
+/* GENERAL */
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    
+}
+
+.app {
+    height: 100vh;
+    width: auto;
+}
+
+/* BANNER */
+.banner {
+    background: linear-gradient(140deg, hsl(278, 68%, 11%) 20%, hsl(278, 94%, 30%), hsl(278, 68%, 11%) 80%);
+    height: 22%;
+}
+
+/* CARDS */
+.card {
+    position: absolute;
+    height: 6em;
+    width: 12em;
+    background-color: aqua;
+    margin-bottom: 1em;
+    border-radius: 6px;
+    color: white;
+}
+
+/* BACK CARD */
+.card-back {
+    top: 1em;
+    right: 3em;
+    background-color: hsl(270, 3%, 87%);
+}
+
+.back-banner {
+    height: 1.5em;
+    background-color: rgb(53, 53, 53);
+    margin-top: .8em;
+}
+
+.back-cvc {
+    height: 1.3em;
+    width: 75%;
+    border-radius: 2px;
+    background-color: rgba(153, 149, 149, 0.65);
+    margin: 1em auto 0;
+    font-size: .7em;
+    padding: .5em .5em 0 0;
+    text-align: end;
+}
+
+/* FRONT CARD */
+.card-front {
+    top: 4.5em;
+    left: 3em;
+    padding: .8em;
+    background: linear-gradient(140deg, hsl(249, 99%, 64%) 70%, hsl(278, 68%, 11%));
+    z-index: 1;
+}
+
+.front-circles  {
+    display: flex;
+    gap: 1em;
+}
+
+.circle-xl {
+    background-color: black;
+    height: 1em;
+    width: 1em;
+}
+
+.circle-xs {
+    background-color: black;
+    height: 1em;
+    width: 1em;
+}
+
+.front-number {
+    font-size: smaller;
+}
+
+.front-name {
+    font-size: x-small;
+}
+
+.front-date {
+    font-size: x-small;
+}

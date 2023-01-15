@@ -8,6 +8,10 @@
       
       <title>Interactive card details form</title>
 
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+      
       <link rel="stylesheet" href="css/reset.css">
       <link rel="stylesheet" href="css/style.css">
 
@@ -17,9 +21,20 @@
 
         <div class="banner"></div>
   
-        <div class="card card-front"></div>
+        <div class="card card-front">
+          <div class="front-circles">
+            <div class="circle-xl"></div>
+            <div class="circle-xs"></div>
+          </div>
+          <div class="front-number">0000 0000 0000 0000</div>
+          <div class="front-name">Jane Appleseed</div>
+          <div class="front-date"><span class="month">00</span>/<span class="year">00</span></div>
+        </div>
   
-        <div class="card card-back"></div>
+        <div class="card card-back">
+          <div class="back-banner"></div>
+          <div class="back-cvc">000</div>
+        </div>
   
         <form action="">
           <label>cardholder name

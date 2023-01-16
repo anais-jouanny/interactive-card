@@ -46,12 +46,14 @@
           </label>  
 
           <div class="date">
-              <label>exp.date (mm/yy)
-                <input type="text" name="month" minlength="2" maxlength="2" placeholder="MM" required>
-                <input type="text" name="year" minlength="2" maxlength="2" placeholder="YY" required>
+              <label class="exp-date">
+                <p>exp.date (mm/yy)</p>
+                <input class="month" type="text" name="month" minlength="2" maxlength="2" placeholder="MM" required>
+                <input class="year" type="text" name="year" minlength="2" maxlength="2" placeholder="YY" required>
               </label>
             
-              <label>cvc
+              <label class="cvc">
+                <p>cvc</p>
                 <input type="number" name="cvc" minlength="3" maxlength="3" placeholder="123" required>
               </label>
           </div>
@@ -59,12 +61,12 @@
           <button>Confirm</button>
         </form>
 
-        <div class="success hidden">
+        <!-- <div class="success hidden">
           <div class="check">✔️</div>
           <h1>thank you!</h1>
           <p>We've added your card details</p>
           <button>Continue</button>
-        </div>
+        </div> -->
 
       </div>
     </body>

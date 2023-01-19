@@ -1,26 +1,34 @@
 /* GENERAL */
 body {
     font-family: 'Space Grotesk', sans-serif;
-    
 }
 
 .app {
     height: 100vh;
-    width: auto;
+    width: 100vw;
 }
 
 /* BANNER */
 .banner {
     background: linear-gradient(140deg, hsl(278, 68%, 11%) 20%, hsl(278, 94%, 30%), hsl(278, 68%, 11%) 80%);
-    height: 25%;
+    height: 30%;
+}
+
+@media (min-width: 992px) {
+  .banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 35%;
+  }
 }
 
 /* CARDS */
 .card {
     position: absolute;
-    height: 6.5em;
-    width: 12em;
-    background-color: aqua;
+    height: 8em;
+    width: 14em;
     margin-bottom: 1em;
     border-radius: 6px;
     color: white;
@@ -29,31 +37,31 @@ body {
 /* BACK CARD */
 .card-back {
     top: 2em;
-    right: 3em;
+    right: 2em;
     background-color: hsl(270, 3%, 87%);
 }
 
 .back-banner {
     height: 1.5em;
     background-color: rgb(53, 53, 53);
-    margin-top: .8em;
+    margin-top: 1.2em;
 }
 
 .back-cvc {
-    height: 1.4em;
+    height: 2em;
     width: 75%;
     border-radius: 2px;
     background-color: rgba(153, 149, 149, 0.65);
-    margin: 1em auto 0;
+    margin: 1.4em auto 0;
     font-size: .7em;
-    padding: .3em;
+    padding: .6em;
     text-align: end;
 }
 
 /* FRONT CARD */
 .card-front {
-    top: 5.5em;
-    left: 3em;
+    top: 6.5em;
+    left: 2em;
     padding: .8em;
     background: linear-gradient(140deg, hsl(249, 99%, 64%) 70%, hsl(278, 68%, 11%));
     z-index: 1;
@@ -64,7 +72,7 @@ body {
     display: flex;
     gap: .4em;
     align-items: center;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
 }
 
 .circle-xl {
@@ -99,17 +107,41 @@ body {
     left: 5em;
 }
 
+/* CARDS : DESKTOP/TABLET @SCREENS */
+@media (min-width: 992px) {
+  .card-back {
+    top: 50%;
+    left: 15em;
+  }
+
+  .card-front {
+    top: 25%;
+    left: 11em;
+  }
+}
+
 /* FORM */
 form {
-    height: 75%;
-    padding: 1em;
+    height: 70%;
+    padding: 2em;
     text-transform: uppercase;
     letter-spacing: .08em;
     color: hsl(278, 68%, 11%);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 2em;
+    gap: 2.5em;
+}
+
+@media (min-width: 992px) {
+  form {
+    height: 100%;
+    width: 65%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10em;
+  }
 }
 
 form > label {
@@ -117,13 +149,22 @@ form > label {
     flex-direction: column;
 }
 
-
-
 form .date {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    grid-template-rows: repeat(2, 1fr);
-    background-color: aqua;
+    max-width: 95%;
+    grid-template-rows: 1fr;
+    grid-template-columns: minmax(0,1fr) minmax(0,1fr) minmax(0,1fr); 
+}
+
+form .exp-date {
+    grid-area: 1 / 1 / 2 / 3;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: minmax(0,1fr) minmax(0,1fr); 
+}
+
+form .cvc {
+    grid-area: 1 / 3 / 2 / 4;
 }
 
 form .exp-date p {
@@ -132,26 +173,26 @@ form .exp-date p {
 
 form .exp-date .month {
     grid-area: 2 / 1 / 3 / 2;
+    width: 75%;
 }
 
 form .exp-date .year {
     grid-area: 2 / 2 / 3 / 3;
+    width: 75%;
 }
-
-form .cvc p {
-    grid-area: 1 / 3 / 2 / 4;
-}
-
-form .cvc input {
-    grid-area: 2 / 3 / 3 / 4;
-}
-
-
 
 form input {
     margin-top: .7em;
     border: 1px solid hsl(270, 3%, 87%);
     border-radius: 4px;
     padding: .5em;
-    width: 90%;
+    max-width: 100%;
+}
+
+form button {
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+    border-radius: 8px;
+    padding: .8em;
+    letter-spacing: .05em;
 }

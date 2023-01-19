@@ -1,0 +1,63 @@
+@use 'src/styles/vars';
+
+.card {
+  position: absolute;
+  height: 8em;
+  width: 14em;
+  margin-bottom: 1em;
+  border-radius: 6px;
+  color: white;
+}
+
+.card-front {
+  top: 6.5em;
+  left: 2em;
+  padding: .8em;
+  background: linear-gradient(140deg, vars.$backcolor-light 70%, vars.$backcolor-dark);
+  z-index: 1;
+  box-shadow: .2em 1.8em 2em -.5em rgba(181, 197, 250, 0.575);
+
+  @media (min-width: 992px) {
+    top: 25%;
+    left: 11em;
+  }
+}
+
+.front-circles  {
+  display: flex;
+  gap: .4em;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.circle-xl {
+  background-color: white;
+  border-radius: 50%;
+  height: 1.2em;
+  width: 1.2em;
+}
+
+.circle-xs {
+  border: 1px solid white;
+  border-radius: 50%;
+  height: .6em;
+  width: .6em;
+}
+
+.front-number {
+  font-size: smaller;
+  margin-bottom: .5em;
+}
+
+.front-name {
+  font-size: x-small;
+  text-transform: uppercase;
+  display: inline;
+}
+
+.front-date {
+  font-size: x-small;
+  display: inline;
+  position: relative;
+  left: 5em;
+}

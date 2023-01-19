@@ -35,26 +35,30 @@
         </div>
   
         <form action="">
-          <label>cardholder name
-            <input type="text" name="name" placeholder="Jane Appleseed" required>
-          </label>
+			<div class="name">
+				<label>cardholder name
+					<input type="text" name="name" placeholder="Jane Appleseed" required>
+				</label>
+			</div>
 
-          <label>card number
-            <input type="text" name="number" minlength="19" maxlength="19" placeholder="1234 5678 9123 0000" required>
-          </label>  
+			<div class="number">
+				<label>card number
+					<input type="text" name="number" minlength="19" maxlength="19" placeholder="1234 5678 9123 0000" required>
+				</label> 
+			</div>
 
-          <div class="date">
+          	<div class="date">
               <label class="exp-date">
-                <p>exp.date (mm/yy)</p>
-                <input class="month" type="text" name="month" minlength="2" maxlength="2" placeholder="MM" required>
-                <input class="year" type="text" name="year" minlength="2" maxlength="2" placeholder="YY" required>
+                	<p>exp.date (mm/yy)</p>
+                	<input class="month" type="text" name="month" minlength="2" maxlength="2" placeholder="MM" required>
+                	<input class="year" type="text" name="year" minlength="2" maxlength="2" placeholder="YY" required>
               </label>
             
               <label class="cvc">
-                <p>cvc</p>
-                <input type="number" name="cvc" minlength="3" maxlength="3" placeholder="123" required>
+                	<p>cvc</p>
+                	<input type="number" name="cvc" minlength="3" maxlength="3" placeholder="123" required>
               </label>
-          </div>
+          	</div>
 
           <button>Confirm</button>
         </form>

@@ -1,0 +1,16 @@
+@use 'src/styles/vars';
+
+.banner {
+  background: linear-gradient(140deg, vars.$backcolor-dark 20%, vars.$backcolor-medium, vars.$backcolor-dark 80%);
+  height: 30%;
+
+  @media (min-width: 992px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 35%;
+    }
+}
+
+

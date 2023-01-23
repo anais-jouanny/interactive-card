@@ -1,0 +1,77 @@
+@use 'src/styles/vars';
+
+form {
+  height: 70%;
+  padding: 2em;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: vars.$backcolor-dark;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.5em;
+}
+
+@media (min-width: 992px) {
+form {
+  height: 100%;
+  width: 65%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10em;
+}
+}
+
+form > label {
+  display: flex;
+  flex-direction: column;
+}
+
+form .date {
+  display: grid;
+  max-width: 95%;
+  grid-template-rows: 1fr;
+  grid-template-columns: minmax(0,1fr) minmax(0,1fr) minmax(0,1fr); 
+}
+
+form .exp-date {
+  grid-area: 1 / 1 / 2 / 3;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: minmax(0,1fr) minmax(0,1fr); 
+}
+
+form .cvc {
+  grid-area: 1 / 3 / 2 / 4;
+}
+
+form .exp-date p {
+  grid-area: 1 / 1 / 2 / 3;
+}
+
+form .exp-date .month {
+  grid-area: 2 / 1 / 3 / 2;
+  width: 75%;
+}
+
+form .exp-date .year {
+  grid-area: 2 / 2 / 3 / 3;
+  width: 75%;
+}
+
+form input {
+  margin-top: .7em;
+  border: 1px solid hsl(270, 3%, 87%);
+  border-radius: 4px;
+  padding: .5em;
+  max-width: 100%;
+}
+
+form button {
+  background-color: vars.$backcolor-dark;
+  color: white;
+  border-radius: 8px;
+  padding: .8em;
+  letter-spacing: .05em;
+}

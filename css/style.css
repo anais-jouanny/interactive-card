@@ -144,14 +144,9 @@ form {
   }
 }
 
-form .name label {
+form > label {
     display: flex;
     flex-direction: column;
-}
-
-form .number label {
-  display: flex;
-  flex-direction: column;
 }
 
 form .date {

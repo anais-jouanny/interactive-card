@@ -2,20 +2,36 @@ import PropTypes from 'prop-types';
 import './Backcard.scss';
 
 function Backcard({ infos }) {
-  const cvcInfos = infos.filter((info) => info.label === 'cvc')[0];
-
   return (
     <div className="card card-back">
       <div className="back-banner" />
-      <div className="back-cvc">{cvcInfos.value}</div>
+      <div className="back-cvc">{infos.cvc.value}</div>
     </div>
   );
 }
 
 Backcard.propTypes = {
-  infos: PropTypes.arrayOf(PropTypes.shape({
-    label: PropTypes.string.isRequired,
-    value: PropTypes.string.isRequired,
+  infos: PropTypes.objectOf(PropTypes.shape({
+    name: PropTypes.objectOf(PropTypes.shape({
+      label: PropTypes.string,
+      value: PropTypes.string,
+    })),
+    number: PropTypes.objectOf(PropTypes.shape({
+      label: PropTypes.string,
+      value: PropTypes.string,
+    })),
+    month: PropTypes.objectOf(PropTypes.shape({
+      label: PropTypes.string,
+      value: PropTypes.string,
+    })),
+    year: PropTypes.objectOf(PropTypes.shape({
+      label: PropTypes.string,
+      value: PropTypes.string,
+    })),
+    cvc: PropTypes.objectOf(PropTypes.shape({
+      label: PropTypes.string,
+      value: PropTypes.string,
+    })),
   })).isRequired,
 };
 

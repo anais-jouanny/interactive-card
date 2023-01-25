@@ -4,10 +4,10 @@ import FormName from './FormName/FormName';
 import FormNumber from './FormNumber/FormNumber';
 import FormDate from './FormDate/FormDate';
 
-function Form({ newName, changeInfos }) {
+function Form({ newName, setNewName, changeInfos }) {
   return (
     <form action="">
-      <FormName newName={newName} changeInfos={changeInfos} />
+      <FormName newName={newName} setNewName={setNewName} changeInfos={changeInfos} />
       <FormNumber />
       <FormDate />
       <button type="submit">Confirm</button>
@@ -17,6 +17,7 @@ function Form({ newName, changeInfos }) {
 
 Form.propTypes = {
   newName: PropTypes.string.isRequired,
+  setNewName: PropTypes.func.isRequired,
   changeInfos: PropTypes.func.isRequired,
 };
 

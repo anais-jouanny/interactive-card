@@ -1,6 +1,11 @@
 import PropTypes from 'prop-types';
 
-function FormName({ newName, changeInfos }) {
+function FormName({ newName, setNewName, changeInfos }) {
+  const handleChange = (event) => {
+    setNewName(event.target.value);
+    changeInfos(event.target.value, 'name');
+  };
+  
   return (
     <label>cardholder name
       <input
@@ -8,9 +13,7 @@ function FormName({ newName, changeInfos }) {
         name="name"
         placeholder="Jane Appleseed"
         value={newName}
-        onChange={(event) => {
-          changeInfos(event.target.value, "name");
-        }}
+        onChange={handleChange}
         required
       />
     </label>
@@ -19,6 +22,7 @@ function FormName({ newName, changeInfos }) {
 
 FormName.propTypes = {
   newName: PropTypes.string.isRequired,
+  setNewName: PropTypes.func.isRequired,
   changeInfos: PropTypes.func.isRequired,
 };
 

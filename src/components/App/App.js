@@ -10,23 +10,14 @@ function App() {
   const [infos, setInfos] = useState(dataInfos);
   const [newName, setNewName] = useState('');
 
-  const changeInfos = (newValue, key) => {
-    const updatedInfos = infos.map((info) => {
-      if (info.key === key) {
-        return {
-          ...info,
-          value: newValue,
-        };
-      }
-      return info;
-    });
-    setInfos(updatedInfos);
+  const changeInfos = (newValue, keyForm) => {
+    
   };
 
   return (
     <div className="app">
       <Header infos={infos} newName={newName} />
-      <Form newName={newName} changeInfos={changeInfos} />
+      <Form newName={newName} setNewName={setNewName} changeInfos={changeInfos} />
     </div>
   );
 }

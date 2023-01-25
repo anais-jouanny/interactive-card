@@ -5,34 +5,19 @@ function Backcard({ infos }) {
   return (
     <div className="card card-back">
       <div className="back-banner" />
-      <div className="back-cvc">{infos.cvc.value}</div>
+      <div className="back-cvc">{infos.cvc}</div>
     </div>
   );
 }
 
 Backcard.propTypes = {
-  infos: PropTypes.objectOf(PropTypes.shape({
-    name: PropTypes.objectOf(PropTypes.shape({
-      label: PropTypes.string,
-      value: PropTypes.string,
-    })),
-    number: PropTypes.objectOf(PropTypes.shape({
-      label: PropTypes.string,
-      value: PropTypes.string,
-    })),
-    month: PropTypes.objectOf(PropTypes.shape({
-      label: PropTypes.string,
-      value: PropTypes.string,
-    })),
-    year: PropTypes.objectOf(PropTypes.shape({
-      label: PropTypes.string,
-      value: PropTypes.string,
-    })),
-    cvc: PropTypes.objectOf(PropTypes.shape({
-      label: PropTypes.string,
-      value: PropTypes.string,
-    })),
-  })).isRequired,
+  infos: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    number: PropTypes.string.isRequired,
+    month: PropTypes.string.isRequired,
+    year: PropTypes.string.isRequired,
+    cvc: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default Backcard;

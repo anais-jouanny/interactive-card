@@ -14,28 +14,13 @@ function Header({ infos, newName }) {
 }
 
 Header.propTypes = {
-  infos: PropTypes.objectOf(PropTypes.shape({
-    name: PropTypes.objectOf(PropTypes.shape({
-      label: PropTypes.string,
-      value: PropTypes.string,
-    })),
-    number: PropTypes.objectOf(PropTypes.shape({
-      label: PropTypes.string,
-      value: PropTypes.string,
-    })),
-    month: PropTypes.objectOf(PropTypes.shape({
-      label: PropTypes.string,
-      value: PropTypes.string,
-    })),
-    year: PropTypes.objectOf(PropTypes.shape({
-      label: PropTypes.string,
-      value: PropTypes.string,
-    })),
-    cvc: PropTypes.objectOf(PropTypes.shape({
-      label: PropTypes.string,
-      value: PropTypes.string,
-    })),
-  })).isRequired,
+  infos: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    number: PropTypes.string.isRequired,
+    month: PropTypes.string.isRequired,
+    year: PropTypes.string.isRequired,
+    cvc: PropTypes.string.isRequired,
+  }).isRequired,
   newName: PropTypes.string.isRequired,
 };
 

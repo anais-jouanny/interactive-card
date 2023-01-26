@@ -28,7 +28,7 @@ function App() {
 
   return (
     <div className="app">
-      <Header infos={infos} newName={newName} />
+      <Header infos={infos} />
       <Form
         newName={newName}
         setNewName={setNewName}

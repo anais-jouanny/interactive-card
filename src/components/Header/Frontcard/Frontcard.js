@@ -8,7 +8,7 @@ function Frontcard({ infos }) {
         <div className="circle-xl" />
         <div className="circle-xs" />
       </div>
-      <div className="front-number">{infos.number}</div>
+      <div className="front-number">{infos.number.split('').join(' ')}</div>
       <div className="front-name">{infos.name}</div>
       <div className="front-date">
         <span className="month">{infos.month} </span>

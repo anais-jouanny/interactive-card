@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 function FormDate({ newMonth, setNewMonth, newYear, setNewYear, newCvc, setNewCvc, changeInfos }) {
   const handleChangeMonth = (event) => {
     setNewMonth(event.target.value);
@@ -56,5 +58,15 @@ function FormDate({ newMonth, setNewMonth, newYear, setNewYear, newCvc, setNewCv
     </div>
   );
 }
+
+FormDate.propTypes = {
+  newMonth: PropTypes.string.isRequired,
+  setNewMonth: PropTypes.func.isRequired,
+  newYear: PropTypes.string.isRequired,
+  setNewYear: PropTypes.func.isRequired,
+  newCvc: PropTypes.string.isRequired,
+  setNewCvc: PropTypes.func.isRequired,
+  changeInfos: PropTypes.func.isRequired,
+};
 
 export default FormDate;

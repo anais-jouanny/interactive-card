@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import './Frontcard.scss';
 
-function Frontcard({ infos, newName }) {
+function Frontcard({ infos }) {
   return (
     <div className="card card-front">
       <div className="front-circles">
@@ -11,8 +11,8 @@ function Frontcard({ infos, newName }) {
       <div className="front-number">{infos.number}</div>
       <div className="front-name">{infos.name}</div>
       <div className="front-date">
-        <span className="month">{infos.month}</span>
-        / <span className="year">{infos.year}</span>
+        <span className="month">{infos.month} </span>
+        /<span className="year"> {infos.year}</span>
       </div>
     </div>
   );
@@ -26,7 +26,6 @@ Frontcard.propTypes = {
     year: PropTypes.string.isRequired,
     cvc: PropTypes.string.isRequired,
   }).isRequired,
-  newName: PropTypes.string.isRequired,
 };
 
 export default Frontcard;

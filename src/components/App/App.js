@@ -9,15 +9,39 @@ import { useState } from 'react';
 function App() {
   const [infos, setInfos] = useState(dataInfos);
   const [newName, setNewName] = useState('');
+  const [newNumber, setNewNumber] = useState('');
+  const [newMonth, setNewMonth] = useState('');
+  const [newYear, setNewYear] = useState('');
+  const [newCvc, setNewCvc] = useState('');
 
   const changeInfos = (newValue, keyForm) => {
-    
+    const infosTab = Object.entries(infos)
+      .map((entry) => {
+        if (entry[0] === keyForm) {
+          return [entry[0], newValue];
+        }
+        return entry;
+      });
+    const updatedInfos = Object.fromEntries(infosTab);
+    setInfos(updatedInfos);
   };
 
   return (
     <div className="app">
       <Header infos={infos} newName={newName} />
-      <Form newName={newName} setNewName={setNewName} changeInfos={changeInfos} />
+      <Form
+        newName={newName}
+        setNewName={setNewName}
+        newNumber={newNumber}
+        setNewNumber={setNewNumber}
+        newMonth={newMonth}
+        setNewMonth={setNewMonth}
+        newYear={newYear}
+        setNewYear={setNewYear}
+        newCvc={newCvc}
+        setNewCvc={setNewCvc}
+        changeInfos={changeInfos}
+      />
     </div>
   );
 }

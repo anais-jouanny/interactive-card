@@ -5,7 +5,6 @@ function FormName({ newName, setNewName, changeInfos }) {
     setNewName(event.target.value);
     changeInfos(event.target.value, 'name');
   };
-  
   return (
     <label>cardholder name
       <input

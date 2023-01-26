@@ -3,11 +3,11 @@ import Backcard from './Backcard/Backcard';
 import Frontcard from './Frontcard/Frontcard';
 import './Header.scss';
 
-function Header({ infos, newName }) {
+function Header({ infos }) {
   return (
     <>
       <div className="banner" />
-      <Frontcard infos={infos} newName={newName} />
+      <Frontcard infos={infos} />
       <Backcard infos={infos} />
     </>
   );
@@ -21,7 +21,6 @@ Header.propTypes = {
     year: PropTypes.string.isRequired,
     cvc: PropTypes.string.isRequired,
   }).isRequired,
-  newName: PropTypes.string.isRequired,
 };
 
 export default Header;

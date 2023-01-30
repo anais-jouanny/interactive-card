@@ -1,17 +1,17 @@
 import PropTypes from 'prop-types';
 
-function FormDate({ newMonth, setNewMonth, newYear, setNewYear, newCvc, setNewCvc, changeInfos }) {
+function FormDate({ setMonth, setYear, setCvc }) {
   const handleChangeMonth = (event) => {
-    setNewMonth(event.target.value);
-    changeInfos(event.target.value, 'month');
+    setMonth(event.target.value);
+    // changeInfos(event.target.value, 'month');
   };
   const handleChangeYear = (event) => {
-    setNewYear(event.target.value);
-    changeInfos(event.target.value, 'year');
+    setYear(event.target.value);
+    // changeInfos(event.target.value, 'year');
   };
   const handleChangeCvc = (event) => {
-    setNewCvc(event.target.value);
-    changeInfos(event.target.value, 'cvc');
+    setCvc(event.target.value);
+    // changeInfos(event.target.value, 'cvc');
   };
 
   return (
@@ -20,23 +20,21 @@ function FormDate({ newMonth, setNewMonth, newYear, setNewYear, newCvc, setNewCv
         <p>exp.date (mm/yy)</p>
         <input
           className="month"
-          type="text"
+          type="number_format"
           name="month"
           minLength="2"
           maxLength="2"
           placeholder="MM"
-          value={newMonth}
           onChange={handleChangeMonth}
           required
         />
         <input
           className="year"
-          type="text"
+          type="number_format"
           name="year"
           minLength="2"
           maxLength="2"
           placeholder="YY"
-          value={newYear}
           onChange={handleChangeYear}
           required
         />
@@ -45,12 +43,11 @@ function FormDate({ newMonth, setNewMonth, newYear, setNewYear, newCvc, setNewCv
       <label className="cvc">
         <p>cvc</p>
         <input
-          type="text"
+          type="number_format"
           name="cvc"
           minLength="3"
           maxLength="3"
           placeholder="123"
-          value={newCvc}
           onChange={handleChangeCvc}
           required
         />
@@ -60,13 +57,9 @@ function FormDate({ newMonth, setNewMonth, newYear, setNewYear, newCvc, setNewCv
 }
 
 FormDate.propTypes = {
-  newMonth: PropTypes.string.isRequired,
-  setNewMonth: PropTypes.func.isRequired,
-  newYear: PropTypes.string.isRequired,
-  setNewYear: PropTypes.func.isRequired,
-  newCvc: PropTypes.string.isRequired,
-  setNewCvc: PropTypes.func.isRequired,
-  changeInfos: PropTypes.func.isRequired,
+  setMonth: PropTypes.func.isRequired,
+  setYear: PropTypes.func.isRequired,
+  setCvc: PropTypes.func.isRequired,
 };
 
 export default FormDate;

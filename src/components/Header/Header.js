@@ -3,24 +3,22 @@ import Backcard from './Backcard/Backcard';
 import Frontcard from './Frontcard/Frontcard';
 import './Header.scss';
 
-function Header({ infos }) {
+function Header({ name, number, month, year, cvc }) {
   return (
     <>
       <div className="banner" />
-      <Frontcard infos={infos} />
-      <Backcard infos={infos} />
+      <Frontcard name={name} number={number} month={month} year={year} />
+      <Backcard cvc={cvc} />
     </>
   );
 }
 
 Header.propTypes = {
-  infos: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    number: PropTypes.string.isRequired,
-    month: PropTypes.string.isRequired,
-    year: PropTypes.string.isRequired,
-    cvc: PropTypes.string.isRequired,
-  }).isRequired,
+  name: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired,
+  month: PropTypes.string.isRequired,
+  year: PropTypes.string.isRequired,
+  cvc: PropTypes.string.isRequired,
 };
 
 export default Header;

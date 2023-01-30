@@ -1,20 +1,19 @@
 import PropTypes from 'prop-types';
 
-function FormNumber({ newNumber, setNewNumber, changeInfos }) {
+function FormNumber({ setNumber }) {
   const handleChange = (event) => {
-    setNewNumber(event.target.value);
-    changeInfos(event.target.value, 'number');
+    setNumber(event.target.value);
+    // changeInfos(event.target.value, 'number');
   };
 
   return (
     <label>card number
       <input
-        type="text"
+        type="number_format"
         name="number"
         minLength="16"
         maxLength="16"
-        placeholder="1234 5678 9123 0000"
-        value={newNumber}
+        placeholder="0000000000000000"
         onChange={handleChange}
         required
       />
@@ -23,9 +22,7 @@ function FormNumber({ newNumber, setNewNumber, changeInfos }) {
 }
 
 FormNumber.propTypes = {
-  newNumber: PropTypes.string.isRequired,
-  setNewNumber: PropTypes.func.isRequired,
-  changeInfos: PropTypes.func.isRequired,
+  setNumber: PropTypes.func.isRequired,
 };
 
 export default FormNumber;

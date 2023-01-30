@@ -2,45 +2,49 @@
 import './App.scss';
 import Header from '../Header/Header';
 import Form from '../Form/Form';
-import dataInfos from '../../data/infos';
 import { useState } from 'react';
 
 // == Composant
 function App() {
-  const [infos, setInfos] = useState(dataInfos);
-  const [newName, setNewName] = useState('');
-  const [newNumber, setNewNumber] = useState('');
-  const [newMonth, setNewMonth] = useState('');
-  const [newYear, setNewYear] = useState('');
-  const [newCvc, setNewCvc] = useState('');
+  // const [infos, setInfos] = useState(dataInfos);
+  const [name, setName] = useState('jane appleseed');
+  const [number, setNumber] = useState('0000000000000000');
+  const [month, setMonth] = useState('00');
+  const [year, setYear] = useState('00');
+  const [cvc, setCvc] = useState('000');
 
-  const changeInfos = (newValue, keyForm) => {
-    const infosTab = Object.entries(infos)
-      .map((entry) => {
-        if (entry[0] === keyForm) {
-          return [entry[0], newValue];
-        }
-        return entry;
-      });
-    const updatedInfos = Object.fromEntries(infosTab);
-    setInfos(updatedInfos);
-  };
+  // const changeInfos = (newValue, keyForm) => {
+  //   const infosTab = Object.entries(infos)
+  //     .map((entry) => {
+  //       if (entry[0] === keyForm) {
+  //         return [entry[0], newValue];
+  //       }
+  //       return entry;
+  //     });
+  //   const updatedInfos = Object.fromEntries(infosTab);
+  //   setInfos(updatedInfos);
+  // };
 
   return (
     <div className="app">
-      <Header infos={infos} />
+      <Header
+        name={name}
+        number={number}
+        month={month}
+        year={year}
+        cvc={cvc}
+      />
       <Form
-        newName={newName}
-        setNewName={setNewName}
-        newNumber={newNumber}
-        setNewNumber={setNewNumber}
-        newMonth={newMonth}
-        setNewMonth={setNewMonth}
-        newYear={newYear}
-        setNewYear={setNewYear}
-        newCvc={newCvc}
-        setNewCvc={setNewCvc}
-        changeInfos={changeInfos}
+        name={name}
+        setName={setName}
+        number={number}
+        setNumber={setNumber}
+        month={month}
+        setMonth={setMonth}
+        year={year}
+        setYear={setYear}
+        cvc={cvc}
+        setCvc={setCvc}
       />
     </div>
   );

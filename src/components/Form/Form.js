@@ -4,29 +4,23 @@ import FormName from './FormName/FormName';
 import FormNumber from './FormNumber/FormNumber';
 import FormDate from './FormDate/FormDate';
 
-function Form({ newNumber, setNewNumber, newName, setNewName, newMonth, setNewMonth, newYear, setNewYear, newCvc, setNewCvc, changeInfos }) {
+function Form({ setNumber, setName, setMonth, setYear, setCvc }) {
   return (
-    <form action="">
-      <FormName newName={newName} setNewName={setNewName} changeInfos={changeInfos} />
-      <FormNumber newNumber={newNumber} setNewNumber={setNewNumber} changeInfos={changeInfos} />
-      <FormDate newMonth={newMonth} setNewMonth={setNewMonth} newYear={newYear} setNewYear={setNewYear} newCvc={newCvc} setNewCvc={setNewCvc} changeInfos={changeInfos} />
+    <form action="" method="post">
+      <FormName setName={setName} />
+      <FormNumber setNumber={setNumber} />
+      <FormDate setMonth={setMonth} setYear={setYear} setCvc={setCvc} />
       <button type="submit">Confirm</button>
     </form>
   );
 }
 
 Form.propTypes = {
-  newName: PropTypes.string.isRequired,
-  setNewName: PropTypes.func.isRequired,
-  newNumber: PropTypes.string.isRequired,
-  setNewNumber: PropTypes.func.isRequired,
-  newMonth: PropTypes.string.isRequired,
-  setNewMonth: PropTypes.func.isRequired,
-  newYear: PropTypes.string.isRequired,
-  setNewYear: PropTypes.func.isRequired,
-  newCvc: PropTypes.string.isRequired,
-  setNewCvc: PropTypes.func.isRequired,
-  changeInfos: PropTypes.func.isRequired,
+  setName: PropTypes.func.isRequired,
+  setNumber: PropTypes.func.isRequired,
+  setMonth: PropTypes.func.isRequired,
+  setYear: PropTypes.func.isRequired,
+  setCvc: PropTypes.func.isRequired,
 };
 
 export default Form;

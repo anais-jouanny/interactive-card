@@ -80,3 +80,7 @@ form button {
   letter-spacing: .05em;
   border: none;
 }
+
+form input:invalid {
+  border: 1px solid grey;
+}

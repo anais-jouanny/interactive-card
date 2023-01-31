@@ -3,6 +3,7 @@
 .banner {
   background: linear-gradient(140deg, vars.$backcolor-dark 20%, vars.$backcolor-medium, vars.$backcolor-dark 80%);
   height: 30%;
+  transition: width 1.5s, height 1.5s;
 
   @media (min-width: 992px) {
     position: absolute;
@@ -10,7 +11,15 @@
     left: 0;
     height: 100%;
     width: 35%;
+
+      &-final {
+        width: 100%;
+      }
     }
+
+  &-final {
+    height: 100%;
+  }
 }
 
 

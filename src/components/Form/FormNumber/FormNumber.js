@@ -1,11 +1,6 @@
 import PropTypes from 'prop-types';
 
 function FormNumber({ setNumber }) {
-  const handleChange = (event) => {
-    setNumber(event.target.value);
-    // changeInfos(event.target.value, 'number');
-  };
-
   return (
     <label>card number
       <input
@@ -14,7 +9,9 @@ function FormNumber({ setNumber }) {
         minLength="16"
         maxLength="16"
         placeholder="0000000000000000"
-        onChange={handleChange}
+        onChange={(event) => {
+          setNumber(event.target.value);
+        }}
         required
       />
     </label>

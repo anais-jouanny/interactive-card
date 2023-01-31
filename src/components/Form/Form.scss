@@ -1,7 +1,11 @@
 @use 'src/styles/vars';
 
-form {
+main {
   height: 70%;
+}
+
+form {
+  height: 100%;
   padding: 2em;
   text-transform: uppercase;
   letter-spacing: .08em;
@@ -74,4 +78,5 @@ form button {
   border-radius: 8px;
   padding: .8em;
   letter-spacing: .05em;
+  border: none;
 }

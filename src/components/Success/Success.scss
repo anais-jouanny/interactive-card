@@ -1,0 +1,61 @@
+@use 'src/styles/vars';
+
+main {
+  height: 70%;
+}
+
+.success {
+  height: 100%;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  transition: transform .5s;
+
+  h1 {
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: vars.$backcolor-dark;
+    font-size: larger;
+  }
+  
+  p {
+    color: grey;
+    margin-bottom: 1.5em;
+  }
+
+  button {
+    background-color: vars.$backcolor-dark;
+    color: white;
+    border-radius: 8px;
+    padding: .8em;
+    letter-spacing: .05em;
+    width: 100%;
+    border: none;
+  }
+
+  .check {
+    background-color: vars.$backcolor-dark;
+    padding: 1em;
+    border-radius: 50%;
+    color: white;
+    font-size: x-large;
+  }
+
+  &-final {
+    transform: scale(0);
+  }
+}
+
+@media (min-width: 992px) {
+  .success {
+    height: 100%;
+    width: 65%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10em;
+}
+}

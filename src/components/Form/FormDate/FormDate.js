@@ -1,19 +1,6 @@
 import PropTypes from 'prop-types';
 
 function FormDate({ setMonth, setYear, setCvc }) {
-  const handleChangeMonth = (event) => {
-    setMonth(event.target.value);
-    // changeInfos(event.target.value, 'month');
-  };
-  const handleChangeYear = (event) => {
-    setYear(event.target.value);
-    // changeInfos(event.target.value, 'year');
-  };
-  const handleChangeCvc = (event) => {
-    setCvc(event.target.value);
-    // changeInfos(event.target.value, 'cvc');
-  };
-
   return (
     <div className="date">
       <label className="exp-date">
@@ -25,7 +12,9 @@ function FormDate({ setMonth, setYear, setCvc }) {
           minLength="2"
           maxLength="2"
           placeholder="MM"
-          onChange={handleChangeMonth}
+          onChange={(event) => {
+            setMonth(event.target.value);
+          }}
           required
         />
         <input
@@ -35,7 +24,9 @@ function FormDate({ setMonth, setYear, setCvc }) {
           minLength="2"
           maxLength="2"
           placeholder="YY"
-          onChange={handleChangeYear}
+          onChange={(event) => {
+            setYear(event.target.value);
+          }}
           required
         />
       </label>
@@ -48,7 +39,9 @@ function FormDate({ setMonth, setYear, setCvc }) {
           minLength="3"
           maxLength="3"
           placeholder="123"
-          onChange={handleChangeCvc}
+          onChange={(event) => {
+            setCvc(event.target.value);
+          }}
           required
         />
       </label>

@@ -6,24 +6,12 @@ import { useState } from 'react';
 
 // == Composant
 function App() {
-  // const [infos, setInfos] = useState(dataInfos);
   const [name, setName] = useState('jane appleseed');
   const [number, setNumber] = useState('0000000000000000');
   const [month, setMonth] = useState('00');
   const [year, setYear] = useState('00');
   const [cvc, setCvc] = useState('000');
-
-  // const changeInfos = (newValue, keyForm) => {
-  //   const infosTab = Object.entries(infos)
-  //     .map((entry) => {
-  //       if (entry[0] === keyForm) {
-  //         return [entry[0], newValue];
-  //       }
-  //       return entry;
-  //     });
-  //   const updatedInfos = Object.fromEntries(infosTab);
-  //   setInfos(updatedInfos);
-  // };
+  const [final, setFinal] = useState(false);
 
   return (
     <div className="app">
@@ -33,6 +21,7 @@ function App() {
         month={month}
         year={year}
         cvc={cvc}
+        final={final}
       />
       <Form
         name={name}
@@ -45,6 +34,8 @@ function App() {
         setYear={setYear}
         cvc={cvc}
         setCvc={setCvc}
+        final={final}
+        setFinal={setFinal}
       />
     </div>
   );

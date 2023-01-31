@@ -4,7 +4,7 @@ function FormNumber({ setNumber }) {
   return (
     <label>card number
       <input
-        type="number_format"
+        type="text"
         name="number"
         minLength="16"
         maxLength="16"
@@ -13,6 +13,7 @@ function FormNumber({ setNumber }) {
           setNumber(event.target.value);
         }}
         required
+        pattern="\d{16}"
       />
     </label>
   );

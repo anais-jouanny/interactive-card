@@ -7,7 +7,7 @@ function FormDate({ setMonth, setYear, setCvc }) {
         <p>exp.date (mm/yy)</p>
         <input
           className="month"
-          type="number_format"
+          type="text"
           name="month"
           minLength="2"
           maxLength="2"
@@ -16,10 +16,11 @@ function FormDate({ setMonth, setYear, setCvc }) {
             setMonth(event.target.value);
           }}
           required
+          pattern="[0-1]\d"
         />
         <input
           className="year"
-          type="number_format"
+          type="text"
           name="year"
           minLength="2"
           maxLength="2"
@@ -28,13 +29,14 @@ function FormDate({ setMonth, setYear, setCvc }) {
             setYear(event.target.value);
           }}
           required
+          pattern="[2]\d"
         />
       </label>
 
       <label className="cvc">
         <p>cvc</p>
         <input
-          type="number_format"
+          type="text"
           name="cvc"
           minLength="3"
           maxLength="3"
@@ -43,6 +45,7 @@ function FormDate({ setMonth, setYear, setCvc }) {
             setCvc(event.target.value);
           }}
           required
+          pattern="\d{3}"
         />
       </label>
     </div>

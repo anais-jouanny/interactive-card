@@ -7,6 +7,7 @@ function FormDate({ setMonth, setYear, setCvc }) {
         <p>exp.date (mm/yy)</p>
         <input
           className="month"
+          id='month'
           type="text"
           name="month"
           minLength="2"

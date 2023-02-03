@@ -31,7 +31,5 @@ Les utilisateurs doivent être en mesure de :
 
 ![mobile_initial_state](src/assets/mobile_initialState.jpeg)
 ![mobile_valid_form](src/assets/mobile_validForm.jpeg)
-![mobile_active_state](src/assets/mobile_activeState.jpeg)
 ![error_form](src/assets/error_form.jpeg)
-![valid_form](src/assets/mobile_validForm.jpeg)
 ![desktop_version](src/assets/desktop.jpeg)

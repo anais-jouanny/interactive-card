@@ -14,7 +14,6 @@ M'exercer sur plusieurs techniques du développement Frontend :
 - Flexbox et CSS Grid
 - SASS
 - React
-- J'ai choisi de ne pas utiliser de State centralisé au vue de la taille du projet
 
 ## Brief
 
